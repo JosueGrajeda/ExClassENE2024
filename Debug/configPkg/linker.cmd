@@ -9,11 +9,11 @@
  */
 
 
--l"C:\Users\intel14\workspace_v10\HVAC_UN_HILO_ORG\Debug\configPkg\package\cfg\release_pem4f.oem4f"
--l"C:\Users\intel14\workspace_v10\HVAC_UN_HILO_ORG\Aux_files\src\sysbios\sysbios.aem4f"
+-l"D:\Practicas Arquitectura\u2\HVAC_UN_HILO_ORG\Debug\configPkg\package\cfg\release_pem4f.oem4f"
+-l"D:\Practicas Arquitectura\u2\HVAC_UN_HILO_ORG\Aux_files\src\sysbios\sysbios.aem4f"
 -l"C:\ti\simplelink_msp432p4_sdk_3_40_01_02\kernel\tirtos\packages\ti\targets\arm\rtsarm\lib\boot.aem4f"
 -l"C:\ti\simplelink_msp432p4_sdk_3_40_01_02\kernel\tirtos\packages\ti\targets\arm\rtsarm\lib\auto_init.aem4f"
--l"C:\ti\xdctools_3_60_02_34_core\packages\xdc\rov\runtime\lib\xdc.rov.runtime.aem4f"
+-l"C:\ti\ccs1250\xdctools_3_62_01_16_core\packages\xdc\rov\runtime\lib\xdc.rov.runtime.aem4f"
 
 --retain="*(xdc.meta)"
 
@@ -73,6 +73,8 @@
 
 /* Content from xdc.runtime.knl (null): */
 
+/* Content from xdc.services.io (null): */
+
 /* Content from ti.catalog.arm.cortexm4 (null): */
 
 /* Content from ti.catalog (null): */
@@ -114,8 +116,6 @@ ti_sysbios_family_arm_m3_Hwi_nvic = 0xe000e000;
 /* Content from ti.sysbios.utils (null): */
 
 /* Content from configPkg (null): */
-
-/* Content from xdc.services.io (null): */
 
 
 

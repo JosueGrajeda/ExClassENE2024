@@ -35,17 +35,20 @@ void *HVAC_Thread(void *arg0)
     HVAC_InicialiceUART();
 
     while(1)
-    {
-        HVAC_ActualizarEntradas();
-        HVAC_ActualizarSalidas();
-        HVAC_PrintState();
-        HVAC_Heartbeat();
+    {   contadorApg = 0;
+        Select_Menu = 0;
+        GPIO_setOutput(LED_RGB_PORT, LED_Rojo, 0);
+        GPIO_setOutput(LED_RGB_PORT, LED_Verde, 0);
+        GPIO_setOutput(LED_RGB_PORT, LED_Azul, 0);
+
+        while(Enc_Apg == ENCENDIDO){
+            HVAC_ActualizarEntradas();
+            HVAC_Enc_Apg_Check();
+            HVAC_PrintState();
+        }
     }
 }
-
-
-
-/* *********  FUNCIONES PARA REALIZAR EL DALAY CON EL TIMER ********* */
+/* *********  FUNCIONES PARA REALIZAR EL DELAY CON EL TIMER ********* */
 void Delay_ms(uint32_t time)
 {
     T32_EnableTimer1(); // Habilita timer.
@@ -59,5 +62,6 @@ void Timer32_INT1(void)
 {
     T32_ClearInterruptFlag1(); // Al llegar a la interrupción
     retraso = false; // desenclava el while.
+    contadorApg = 0;
 }
 
