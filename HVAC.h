@@ -15,7 +15,7 @@
 
 #define __MSP432P401R__
 #define  __SYSTEM_CLOCK    48000000 // Frecuencias funcionales recomendadas: 12, 24 y 48 Mhz.
-
+#define GIT "Hola Git"
 /* Archivos de cabecera importantes. */
 #include <unistd.h>
 #include <stdint.h>
